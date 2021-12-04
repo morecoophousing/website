@@ -1,0 +1,69 @@
+body
+{
+	background-color: RGBA(135, 206, 235, 1);
+}
+
+h1
+{
+	text-align: center;
+}
+
+#container
+{
+	top: 0;
+	bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80em;
+	background-color: RGBA(135, 206, 235, 1);
+}
+
+#outer
+{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+
+.contents
+{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	margin-left: 8em;
+	margin-right: 8em;
+}
+
+/*Strip the ul of padding and list styling*/
+.nav-list
+{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+
+/*Create a horizontal list with spacing*/
+.nav-element
+{
+    display:inline-block;
+    margin-right: 4em;
+}
+
+.nav-element a 
+{
+    display:inline-block;
+    min-width:140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    background: RGBA(60, 80, 255, 1);
+    text-decoration: none;
+}
+
+/*Hover state for top level links*/
+.nav-element a:hover 
+{
+    background: RGBA(15, 20, 150, 1);
+}
