@@ -10,6 +10,8 @@ on:
       'main'  
 
 jobs:
+  environment: basic
+
   upload:
     runs-on: ubuntu-latest
     steps:
@@ -24,9 +26,7 @@ jobs:
           KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - run: |
-          mkdir -p $GITHUB_WORKSPACE/docroot
           cd $GITHUB_WORKSPACE/src
-
           ./build
 
           scp -r $GITHUB_WORKSPACE/docroot $REMOTE:$BASE
