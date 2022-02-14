@@ -5,6 +5,7 @@ on:
 
 jobs:
   test-local:
+    environment: basic
     runs-on: ubuntu-latest
     steps:
       - run: |
