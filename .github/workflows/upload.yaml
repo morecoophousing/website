@@ -6,9 +6,9 @@ on:
       'main'
 
 jobs:
-  environment: basic
 
   upload:
+    environment: basic
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
