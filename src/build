@@ -1,0 +1,8 @@
+#  Create html files by using the m4 macro processor to include snippet files
+#  Write resulting html file to docroot
+
+m4 -P index.snippet > ../docroot/index.html
+m4 -P events.snippet > ../docroot/events.html
+m4 -P projects.snippet > ../docroot/projects.html
+m4 -P publications.snippet > ../docroot/publications.html
+m4 -P values.snippet > ../docroot/values.html

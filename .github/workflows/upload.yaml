@@ -1,0 +1,37 @@
+name: upload
+
+env:
+  REMOTE: jrootham@jrootham.ca
+  BASE: /var/www/vhosts/jrootham.ca/mchc.jrootham.ca
+
+on: 
+  push:
+    branches:
+      'main'  
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: |
+          mkdir -p ~/.ssh/
+          echo $KEY > ~/.ssh/id_ecdsa
+          chmod 600 ~/.ssh/id_ecdsa
+
+        env:
+          KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - run: |
+          mkdir -p $GITHUB_WORKSPACE/docroot
+          cd $GITHUB_WORKSPACE/src
+
+          ./build
+
+          scp -r $GITHUB_WORKSPACE/docroot $REMOTE:$BASE
+
+
+
+
+      
