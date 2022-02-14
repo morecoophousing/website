@@ -18,6 +18,8 @@ jobs:
           echo $KEY > ~/.ssh/id_ecdsa
           chmod 600 ~/.ssh/id_ecdsa
 
+          ls -l ~/.ssh/id_ecdsa
+
         env:
           KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
