@@ -1,11 +1,9 @@
 name: upload
 
-env:
-  REMOTE: jrootham@jrootham.ca
-  BASE: /var/www/vhosts/jrootham.ca/mchc.jrootham.ca
-
 on: 
   push:
+    branches:
+      'main'
 
 jobs:
   environment: basic
@@ -29,6 +27,10 @@ jobs:
 
           scp -r $GITHUB_WORKSPACE/docroot $REMOTE:$BASE
 
+
+env:
+  REMOTE: jrootham@jrootham.ca
+  BASE: /var/www/vhosts/jrootham.ca/mchc.jrootham.ca
 
 
 
