@@ -1,0 +1,15 @@
+name: test-local
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  test-local:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo $KEY > foo.txt
+          cat foo.txt
+
+        env: 
+          KEY: ${{ secrets.FAKE_SSH_KEY }}
