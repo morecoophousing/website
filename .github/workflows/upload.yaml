@@ -20,8 +20,8 @@ jobs:
 
           ls -l ~/.ssh/id_ecdsa
           wc ~/.ssh/id_ecdsa
-          head -2 ~/.ssh/id_ecdsa | wc
-          tail -2 ~/.ssh/id_ecdsa | wc
+          head -1 ~/.ssh/id_ecdsa | wc
+          tail -1 ~/.ssh/id_ecdsa | wc
           whoami
 
         env:
