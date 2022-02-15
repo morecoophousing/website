@@ -19,6 +19,7 @@ jobs:
           chmod 600 ~/.ssh/id_ecdsa
 
           ls -l ~/.ssh/id_ecdsa
+          whoami
 
         env:
           KEY: ${{ secrets.SSH_PRIVATE_KEY }}
