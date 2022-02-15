@@ -15,6 +15,7 @@ jobs:
 
       - run: |
           mkdir -p ~/.ssh/
+          chmod 700 ~/.ssh
           echo "$KEY" > ~/.ssh/id_ecdsa
           chmod 600 ~/.ssh/id_ecdsa
 
