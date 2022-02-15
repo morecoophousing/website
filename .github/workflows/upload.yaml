@@ -19,6 +19,9 @@ jobs:
           chmod 600 ~/.ssh/id_ecdsa
 
           ls -l ~/.ssh/id_ecdsa
+          wc ~/.ssh/id_ecdsa
+          head -2 ~/.ssh/id_ecdsa
+          tail -2 ~/.ssh/id_ecdsa
           whoami
 
         env:
