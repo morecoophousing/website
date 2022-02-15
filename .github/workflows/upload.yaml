@@ -15,13 +15,13 @@ jobs:
 
       - run: |
           mkdir -p ~/.ssh/
-          echo "$KEY" > ~/.ssh/id_ecdsa
+          echo '$KEY' > ~/.ssh/id_ecdsa
           chmod 600 ~/.ssh/id_ecdsa
 
           ls -l ~/.ssh/id_ecdsa
           wc ~/.ssh/id_ecdsa
-          head -2 ~/.ssh/id_ecdsa
-          tail -2 ~/.ssh/id_ecdsa
+          head -2 ~/.ssh/id_ecdsa | wc
+          tail -2 ~/.ssh/id_ecdsa | wc
           whoami
 
         env:
