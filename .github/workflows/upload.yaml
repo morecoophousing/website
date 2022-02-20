@@ -30,6 +30,7 @@ jobs:
           KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - run: |
+          wc ~/.ssh/id_ecdsa
           cd $GITHUB_WORKSPACE/src
           ./build
 
